@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -8,11 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="Muflone" Version="6.2.0" />
-    <PackageReference Include="Muflone.Eventstore" Version="6.1.1" />
+    <PackageReference Include="Muflone.Eventstore" Version="6.1.1" />    <PackageReference Include="Muflone.Eventstore" Version="6.1.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Brewup.Modules.Warehouse.Infrastructure\Brewup.Modules.Warehouse.Infrastructure.csproj" />
+    <ProjectReference Include="..\Brewup.Warehouse.Domain\Brewup.Warehouse.Domain.csproj" />
+    <ProjectReference Include="..\Brewup.Warehouse.Shared\Brewup.Warehouse.Shared.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,7 +1,7 @@
 ﻿using Brewup.Modules.Warehouse.Abstracts;
-using Brewup.Modules.Warehouse.Shared.Concretes;
-using Brewup.Modules.Warehouse.Shared.DomainEvents;
-using Brewup.Modules.Warehouse.Shared.IntegrationEvents;
+using Brewup.Warehouse.Shared.Concretes;
+using Brewup.Warehouse.Shared.DomainEvents;
+using Brewup.Warehouse.Shared.IntegrationEvents;
 using Microsoft.Extensions.Logging;
 using Muflone;
 

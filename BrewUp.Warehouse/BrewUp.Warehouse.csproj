@@ -28,8 +28,8 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\Brewup.Infrastructure.Muflone\Brewup.Infrastructure.Muflone.csproj" />
-	  <ProjectReference Include="..\Brewup.Infrastructure.ReadModel.MongoDb\Brewup.Infrastructure.ReadModel.MongoDb.csproj" />
 	  <ProjectReference Include="..\Brewup.Modules.Warehouse\Brewup.Modules.Warehouse.csproj" />
+	  <ProjectReference Include="..\Brewup.Warehouse.ReadModel.MongoDb\Brewup.Warehouse.ReadModel.MongoDb.csproj" />
 	</ItemGroup>
 
   <ItemGroup>

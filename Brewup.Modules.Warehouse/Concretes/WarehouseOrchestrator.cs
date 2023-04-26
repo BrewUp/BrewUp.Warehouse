@@ -1,9 +1,8 @@
 ﻿using Brewup.Modules.Warehouse.Abstracts;
-using Brewup.Modules.Warehouse.Shared.Commands;
-using Brewup.Modules.Warehouse.Shared.CustomTypes;
-using Brewup.Modules.Warehouse.Shared.Dtos;
-using Brewup.Modules.Warehouse.Shared.Helpers;
-
+using Brewup.Warehouse.Shared.Commands;
+using Brewup.Warehouse.Shared.CustomTypes;
+using Brewup.Warehouse.Shared.Dtos;
+using Brewup.Warehouse.Shared.Helpers;
 using Microsoft.Extensions.Logging;
 using Muflone.Persistence;
 

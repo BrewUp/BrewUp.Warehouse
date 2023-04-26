@@ -1,9 +1,9 @@
-﻿using Brewup.Infrastructure.ReadModel.Abstracts;
-using Brewup.Infrastructure.ReadModel.Models;
-using Brewup.Modules.Warehouse.Abstracts;
-using Brewup.Modules.Warehouse.Shared.Concretes;
-using Brewup.Modules.Warehouse.Shared.CustomTypes;
-using Brewup.Modules.Warehouse.Shared.Dtos;
+﻿using Brewup.Modules.Warehouse.Abstracts;
+using Brewup.Warehouse.ReadModel.Abstracts;
+using Brewup.Warehouse.ReadModel.Models;
+using Brewup.Warehouse.Shared.Concretes;
+using Brewup.Warehouse.Shared.CustomTypes;
+using Brewup.Warehouse.Shared.Dtos;
 using Microsoft.Extensions.Logging;
 
 namespace Brewup.Modules.Warehouse.Concretes;

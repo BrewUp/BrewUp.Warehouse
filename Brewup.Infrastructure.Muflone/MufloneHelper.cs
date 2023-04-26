@@ -1,5 +1,5 @@
-﻿using Brewup.Modules.Warehouse.Infrastructure.Consumers.Commands;
-using Brewup.Modules.Warehouse.Infrastructure.Consumers.Events;
+﻿using Brewup.Infrastructure.Muflone.Consumers.Commands;
+using Brewup.Infrastructure.Muflone.Consumers.Events;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Muflone;

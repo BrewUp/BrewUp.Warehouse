@@ -1,4 +1,4 @@
-﻿using Brewup.Infrastructure.ReadModel.Abstracts;
+﻿using Brewup.Warehouse.ReadModel.Abstracts;
 using Microsoft.Extensions.Logging;
 
 namespace Brewup.Modules.Warehouse.Abstracts;

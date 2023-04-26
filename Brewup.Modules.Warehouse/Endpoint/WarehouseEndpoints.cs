@@ -1,6 +1,6 @@
 ﻿using Brewup.Modules.Warehouse.Abstracts;
-using Brewup.Modules.Warehouse.Shared.Concretes;
-using Brewup.Modules.Warehouse.Shared.Dtos;
+using Brewup.Warehouse.Shared.Concretes;
+using Brewup.Warehouse.Shared.Dtos;
 using FluentValidation;
 using Microsoft.AspNetCore.Http;
 

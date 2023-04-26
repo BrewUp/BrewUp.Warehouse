@@ -1,8 +1,8 @@
 ﻿using Brewup.Modules.Warehouse.Abstracts;
 using Brewup.Modules.Warehouse.Concretes;
 using Brewup.Modules.Warehouse.EventsHandler;
-using Brewup.Modules.Warehouse.Shared.DomainEvents;
 using Brewup.Modules.Warehouse.Validators;
+using Brewup.Warehouse.Shared.DomainEvents;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;

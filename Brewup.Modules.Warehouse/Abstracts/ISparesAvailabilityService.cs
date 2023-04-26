@@ -1,5 +1,5 @@
-﻿using Brewup.Modules.Warehouse.Shared.CustomTypes;
-using Brewup.Modules.Warehouse.Shared.Dtos;
+﻿using Brewup.Warehouse.Shared.CustomTypes;
+using Brewup.Warehouse.Shared.Dtos;
 
 namespace Brewup.Modules.Warehouse.Abstracts;
 

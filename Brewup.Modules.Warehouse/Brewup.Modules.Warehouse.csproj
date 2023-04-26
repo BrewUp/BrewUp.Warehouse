@@ -19,10 +19,12 @@
   <ItemGroup>
     <ProjectReference Include="..\Brewup.Infrastructure.ReadModel\Brewup.Infrastructure.ReadModel.csproj" />
     <ProjectReference Include="..\Brewup.Modules.Warehouse.Shared\Brewup.Modules.Warehouse.Shared.csproj" />
+    <ProjectReference Include="..\Brewup.Warehouse.ReadModel\Brewup.Warehouse.ReadModel.csproj" />
+    <ProjectReference Include="..\Brewup.Warehouse.Shared\Brewup.Warehouse.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <InternalsVisibleTo Include="Brewup.Modules.Warehouse.Fitness.Tests"/>
+    <InternalsVisibleTo Include="Brewup.Modules.Warehouse.Fitness.Tests" />
   </ItemGroup>
 
 </Project>

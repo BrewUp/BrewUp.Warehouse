@@ -1,6 +1,6 @@
 ﻿using Brewup.Infrastructure.Muflone;
-using Brewup.Infrastructure.ReadModel.MongoDb;
-using Brewup.Modules.Warehouse.Shared.Configuration;
+using Brewup.Warehouse.ReadModel.MongoDb;
+using Brewup.Warehouse.Shared.Configuration;
 using Muflone.Eventstore;
 using Muflone.Saga.Persistence.MongoDb;
 
