@@ -1,5 +1,5 @@
-﻿using Brewup.Modules.Warehouse;
-using Brewup.Modules.Warehouse.Endpoint;
+﻿using Brewup.Warehouse.ApplicationService;
+using Brewup.Warehouse.ApplicationService.Endpoint;
 
 namespace BrewUp.Warehouse.Modules;
 
@@ -10,7 +10,7 @@ public class WarehouseModule : IModule
 
 	public IServiceCollection RegisterModule(WebApplicationBuilder builder)
 	{
-		return builder.Services.AddWarehouseModule();;
+		return builder.Services.AddWarehouseModule(); ;
 	}
 
 	public IEndpointRouteBuilder MapEndpoints(IEndpointRouteBuilder endpoints)

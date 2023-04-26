@@ -1,4 +1,3 @@
-using Brewup.Modules;
 using BrewUp.Warehouse.Modules;
 using BrewUp.Warehouse.Validators;
 using FluentValidation;

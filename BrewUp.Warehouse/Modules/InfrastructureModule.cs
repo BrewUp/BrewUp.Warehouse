@@ -1,4 +1,4 @@
-﻿using Brewup.Infrastructure.Muflone;
+﻿using Brewup.Warehouse.Muflone;
 using Brewup.Warehouse.ReadModel.MongoDb;
 using Brewup.Warehouse.Shared.Configuration;
 using Muflone.Eventstore;
@@ -15,7 +15,8 @@ public class InfrastructureModule : IModule
 	{
 		builder.Services.AddMongoDb(builder.Configuration.GetSection("BrewUp:MongoDbSettings").Get<MongoDbSettings>()!);
 		builder.Services.AddEventstoreMongoDb(builder.Configuration.GetSection("BrewUp:MongoDbSettings").Get<MongoDbSettings>()!);
-		builder.Services.AddMongoSagaStateRepository(new MongoSagaStateRepositoryOptions("mongodb://localhost", "BrewUp"));
+		builder.Services.AddMongoSagaStateRepository(new MongoSagaStateRepositoryOptions(builder.Configuration["BrewUp:MongoDbSettings:ConnectionString"]!,
+			builder.Configuration["BrewUp:MongoDbSettings:DatabaseName"]!));
 
 		builder.Services.AddMufloneEventStore(builder.Configuration["BrewUp:EventStoreSettings:ConnectionString"]!);
 		builder.Services.AddMuflone();
@@ -23,9 +24,5 @@ public class InfrastructureModule : IModule
 		return builder.Services;
 	}
 
-	public IEndpointRouteBuilder MapEndpoints(IEndpointRouteBuilder endpoints)
-	{
-		// do nothing
-		return null;
-	}
+	public IEndpointRouteBuilder MapEndpoints(IEndpointRouteBuilder endpoints) => endpoints;
 }

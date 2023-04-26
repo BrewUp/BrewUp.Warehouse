@@ -27,8 +27,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Brewup.Infrastructure.Muflone\Brewup.Infrastructure.Muflone.csproj" />
 	  <ProjectReference Include="..\Brewup.Modules.Warehouse\Brewup.Modules.Warehouse.csproj" />
+	  <ProjectReference Include="..\Brewup.Warehouse.ApplicationService\Brewup.Warehouse.ApplicationService.csproj" />
+	  <ProjectReference Include="..\Brewup.Warehouse.Muflone\Brewup.Warehouse.Muflone.csproj" />
 	  <ProjectReference Include="..\Brewup.Warehouse.ReadModel.MongoDb\Brewup.Warehouse.ReadModel.MongoDb.csproj" />
 	</ItemGroup>
 
