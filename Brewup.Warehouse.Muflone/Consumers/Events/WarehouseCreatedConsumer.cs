@@ -3,7 +3,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Muflone.Messages.Events;
 using Muflone.Persistence;
-using Muflone.Transport.InMemory.Consumers;
+using Muflone.Transport.Azure.Consumers;
+using Muflone.Transport.Azure.Models;
 
 namespace Brewup.Warehouse.Muflone.Consumers.Events;
 
@@ -12,7 +13,9 @@ public sealed class WarehouseCreatedConsumer : DomainEventConsumerBase<Warehouse
 	protected override IEnumerable<IDomainEventHandlerAsync<WarehouseCreated>> HandlersAsync { get; }
 
 	public WarehouseCreatedConsumer(IServiceProvider serviceProvider,
-		ILoggerFactory loggerFactory, ISerializer? messageSerializer = null) : base(loggerFactory, messageSerializer)
+		AzureServiceBusConfiguration azureServiceBusConfiguration,
+		ILoggerFactory loggerFactory,
+		ISerializer? messageSerializer = null) : base(azureServiceBusConfiguration, loggerFactory, messageSerializer)
 	{
 		HandlersAsync = serviceProvider.GetServices<IDomainEventHandlerAsync<WarehouseCreated>>();
 	}

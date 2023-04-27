@@ -28,7 +28,7 @@ public class InfrastructureModule : IModule
 			builder.Configuration["BrewUp:MongoDbSettings:DatabaseName"]!));
 
 		builder.Services.AddMufloneEventStore(builder.Configuration["BrewUp:EventStoreSettings:ConnectionString"]!);
-		builder.Services.AddMuflone();
+		builder.Services.AddMuflone(builder.Configuration.GetSection("BrewUp:ServiceBusSettings").Get<ServiceBusSettings>()!);
 
 		return builder.Services;
 	}

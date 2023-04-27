@@ -1,6 +1,8 @@
 ﻿using Brewup.Warehouse.Muflone.Consumers.Commands;
+using Brewup.Warehouse.Muflone.Consumers.Events;
 using Brewup.Warehouse.Shared.Commands;
 using Brewup.Warehouse.Shared.Configuration;
+using Brewup.Warehouse.Shared.DomainEvents;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Muflone;
@@ -30,20 +32,19 @@ public static class MufloneHelper
 		{
 			#region Warehouse
 			new CreateWarehouseConsumer(repository!, azureBusConfiguration with { TopicName = nameof(CreateWarehouse)}, loggerFactory!),
-			//new WarehouseCreatedConsumer(serviceProvider, loggerFactory!),
+			new WarehouseCreatedConsumer(serviceProvider, azureBusConfiguration with { TopicName = nameof(WarehouseCreated)}, loggerFactory!),
 
-			//new AddBeerDepositConsumer(repository!, loggerFactory!),
-			//new BeerDepositAddedConsumer(serviceProvider, loggerFactory!),
+			new AddBeerDepositConsumer(repository!, azureBusConfiguration with { TopicName = nameof(AddBeerDeposit)}, loggerFactory!),
+			new BeerDepositAddedConsumer(serviceProvider, azureBusConfiguration with { TopicName = nameof(BeerDepositAdded)}, loggerFactory!),
 
-			//new AskForBeersAvailabilityConsumer(repository!, loggerFactory!),
+			new AskForBeersAvailabilityConsumer(repository!, azureBusConfiguration with { TopicName = nameof(AskForBeersAvailability)}, loggerFactory!),
+			new BeersAvailabilityAskedConsumer(serviceProvider, azureBusConfiguration with { TopicName = nameof(BeersAvailabilityAsked)}, loggerFactory!),
 
-			//new WithdrawalFromWarehouseConsumer(repository!, loggerFactory!),
+			new WithdrawalFromWarehouseConsumer(repository!, azureBusConfiguration with { TopicName = nameof(WithdrawalFromWarehouse)}, loggerFactory!),
 			#endregion
 		};
 
-		TransportAzureHelper.AddMufloneTransportAzure(services)
-
-		services.AddMufloneTransportInMemory(consumers);
+		services.AddMufloneTransportAzure(azureBusConfiguration with { TopicName = string.Empty }, consumers);
 
 		return services;
 	}
